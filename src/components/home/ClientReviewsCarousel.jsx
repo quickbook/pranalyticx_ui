@@ -15,46 +15,71 @@ import { Helmet } from "react-helmet-async";
 // Import slick styles (make sure installed)
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { a } from "framer-motion/client";
 
 const reviews = [
   {
-    name: "John Doe (test)",
-    company: "Aqua Farms Ltd.",
+    id: 1,
+    name: "Ravi Kumar",
+    company: "EduTech Academy",
     rating: 5,
     message:
-      "Excellent service and seamless experience. Highly recommended! The team was very responsive and delivered everything on time with great quality.",
-    date: "March 12, 2026",
+      "The team delivered a highly scalable learning management system tailored to our needs. The UI is intuitive, and the backend integrations have significantly improved our student management and reporting workflows.",
+    date: "March 18, 2026",
   },
   {
-    name: "Sarah Williams (test)",
-    company: "BlueWater Co.",
-    rating: 4,
-    message: "Very professional team and great support throughout the project.",
-    date: "February 28, 2026",
-  },
-  {
-    name: "Michael Lee  (test)",
-    company: "FishTech Solutions",
+    id: 2,
+    name: "Anita Sharma",
+    company: "NextGen IT Solutions",
     rating: 5,
     message:
-      "The platform is intuitive and helped streamline our operations. We saw a significant improvement in efficiency and data handling after adopting this solution. asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa sasasasa sasasasa asasasasas",
-    date: "January 15, 2026",
+      "Their expertise in middleware integration helped us connect multiple services seamlessly. API performance and security implementation exceeded our expectations.",
+    date: "February 25, 2026",
   },
   {
-    name: "Emily Davis (test)",
-    company: "Ocean Harvest",
-    rating: 5,
-    message: "Amazing UI and smooth performance. Loved working with this team.",
-    date: "December 20, 2025",
-  },
-  {
-    name: "David Brown (test)",
-    company: "GreenPond Systems",
+    id: 3,
+    name: "Mohammed Arif",
+    company: "SmartSchool Systems",
     rating: 4,
     message:
-      "Reliable and efficient. Delivered exactly what we needed with excellent communication and attention to detail.",
-    date: "November 10, 2025",
+      "We partnered with them for a complete website redesign and backend modernization. The platform is now faster, more responsive, and much easier for our staff to use.",
+    date: "January 30, 2026",
+  },
+  {
+    id: 4,
+    name: "Priya Reddy",
+    company: "Digital Learning Hub",
+    rating: 5,
+    message:
+      "Excellent work on our education portal. Features like course management, user authentication, and analytics dashboards were implemented flawlessly.",
+    date: "December 22, 2025",
+  },
+  {
+    id: 5,
+    name: "Karthik Varma",
+    company: "CloudBridge Technologies",
+    rating: 5,
+    message:
+      "Their team built a robust web application with smooth API integrations and modern UI. The project was delivered on time with great attention to scalability and maintainability.",
+    date: "November 14, 2025",
+  },
+  ,
+  {
+    id: 6,
+    name: "Sneha Iyer",
+    company: "LearnSphere Online",
+    rating: 5,
+    message:
+      "From requirements to deployment, the process was smooth and transparent. The team built a feature-rich e-learning platform with secure authentication, video delivery, and performance tracking.",
+    date: "October 5, 2025",
+  },
+  {
+    id: 7,
+    name: "Rahul Mehta",
+    company: "APIWorks Pvt Ltd",
+    rating: 4,
+    message:
+      "Strong technical expertise in API design and middleware orchestration. They helped us modernize legacy systems and improve system reliability with clean architecture.",
+    date: "September 18, 2025",
   },
 ];
 
@@ -74,6 +99,7 @@ const ClientReviewsCarousel = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 960,
@@ -106,7 +132,7 @@ const ClientReviewsCarousel = () => {
           const isLong = review.message.length > 120; // heuristic for ~3 lines
 
           return (
-            <Box key={index} sx={{ px: 2 }}>
+            <Box key={index} sx={{ px: 2,py: 2 }}>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -120,6 +146,11 @@ const ClientReviewsCarousel = () => {
                     color: "text.primary",
                     height: "100%",
                     boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+                    "&:hover": {
+                      boxShadow: "0 15px 40px rgba(0,0,0,0.5)",
+                      transform: "translateY(-5px)",
+                    },
+                    transition: "all 0.3s ease",
                   }}
                 >
                   <CardContent>

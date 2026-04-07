@@ -175,7 +175,7 @@ const ProgramSection = ({ section }) => {
       sx={{
         py: { xs: 2, md: 4 },
         bgcolor: reverse ? "#F5F7FA" : "#fff",
-        borderBottom: "1px solid #E0E0E0",
+        borderBottom: "2px solid #d5d5d5",
       }}
     >
       <Container maxWidth="lg">
