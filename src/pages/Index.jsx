@@ -6,6 +6,7 @@ import ProcessSection from '../components/home/ProcessSection';
 import WhyChooseUsSection from '../components/home/WhyChooseUsSection';
 import { useEffect } from 'react';
 import CircularServicesSection from '../components/home/CircularServicesSection';
+import ClientReviewsCarousel from '../components/home/ClientReviewsCarousel';
 
 const Index = () => {
     useEffect(() => {
@@ -31,6 +32,7 @@ const Index = () => {
         <CircularServicesSection />
         <ProcessSection />
         <WhyChooseUsSection />
+        <ClientReviewsCarousel />
       </Layout>
     </>
   );

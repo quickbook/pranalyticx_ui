@@ -12,6 +12,7 @@ import {
   ListItemIcon,
   ListItemText,
   Grid,
+  Chip,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Layout from "../components/layout/Layout";
@@ -20,6 +21,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import DevicesIcon from "@mui/icons-material/Devices";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import { useEffect } from "react";
 
 const features = [
@@ -63,6 +65,240 @@ const features = [
     ],
   },
 ];
+
+/* ─── Program sections data ─────────────────────────────────────── */
+const sections = [
+  {
+    tag: "Education Program",
+    title: "Building Foundational Engineering Competencies",
+    subtitle:
+      "A structured program that equips students with the technical literacy to confidently engage with real-world automation and engineering systems from the ground up.",
+    bullets: [
+      {
+        heading: "Industry-relevant hardware exposure",
+        detail:
+          "Hands-on experience with sensors, controllers, and automation components used in real manufacturing environments.",
+      },
+      {
+        heading: "STEM-aligned curriculum",
+        detail:
+          "Coursework mapped to national engineering and technology standards, ensuring students are exam-ready and industry-aware.",
+      },
+      {
+        heading: "Project-based learning",
+        detail:
+          "Students design and build working prototypes, bridging the gap between classroom theory and applied engineering practice.",
+      },
+      {
+        heading: "Educator progress dashboard",
+        detail:
+          "Real-time tools that help teachers monitor individual student milestones and intervene early when support is needed.",
+      },
+    ],
+    image: "/images/hero-education.jpeg",
+    alt: "Students working with engineering automation systems in a classroom",
+    reverse: false,
+  },
+  {
+    tag: "AI Platform",
+    title: "AI-Powered Literacy Enhancement Platform",
+    subtitle:
+      "Eye-tracking combined with adaptive AI creates deeply personalised reading experiences — and gives teachers the real-time insights they need to accelerate every learner.",
+    bullets: [
+      {
+        heading: "Eye-tracking reading analysis",
+        detail:
+          "Identifies exactly where students struggle — skipped words, regressions, slow fixations — and adapts difficulty in real time.",
+      },
+      {
+        heading: "Personalised AI learning pathways",
+        detail:
+          "Every student gets a unique content sequence tailored to their comprehension level, vocabulary gaps, and reading pace.",
+      },
+      {
+        heading: "Gamified engagement loops",
+        detail:
+          "Rewards, streaks, and adaptive challenges keep students motivated and coming back daily without external pressure.",
+      },
+      {
+        heading: "Live teacher analytics",
+        detail:
+          "Dashboards surface actionable class-wide and individual data so educators can focus time where it matters most.",
+      },
+    ],
+    image: "/images/hero-eyetracking.jpg",
+    alt: "Student using AI-powered eye-tracking literacy platform",
+    reverse: true,
+  },
+];
+
+/* ─── Bullet row ─────────────────────────────────────────────── */
+const BulletRow = ({ heading, detail, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 12 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.4, delay }}
+  >
+    <Box sx={{ display: "flex", gap: 2, mb: 2.5 }}>
+      <CheckCircleRoundedIcon
+        sx={{ color: "#1476AE", fontSize: 20, mt: "3px", flexShrink: 0 }}
+      />
+      <Box>
+        <Typography
+          sx={{
+            fontWeight: 600,
+            fontSize: "0.95rem",
+            color: "#031168",
+            mb: 0.4,
+          }}
+        >
+          {heading}
+        </Typography>
+        <Typography
+          sx={{ fontSize: "0.9rem", color: "#5A6880", lineHeight: 1.65 }}
+        >
+          {detail}
+        </Typography>
+      </Box>
+    </Box>
+  </motion.div>
+);
+
+/* ─── Section ────────────────────────────────────────────────── */
+const ProgramSection = ({ section }) => {
+  const { tag, title, subtitle, bullets, image, alt, reverse } = section;
+
+  return (
+    <Box
+      component="section"
+      sx={{
+        py: { xs: 2, md: 4 },
+        bgcolor: reverse ? "#F5F7FA" : "#fff",
+        borderBottom: "1px solid #E0E0E0",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+            gap: { xs: 6, md: 8 },
+            alignItems: "center",
+          }}
+        >
+          {/* ── Image ── */}
+          <Box sx={{ order: { xs: 1, md: reverse ? 2 : 1 } }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  aspectRatio: "4 / 3",
+                  boxShadow: "0 24px 64px rgba(3,17,104,0.12)",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={image}
+                  alt={alt}
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.7s ease",
+                    "&:hover": { transform: "scale(1.04)" },
+                  }}
+                />
+                <Box
+                  sx={{
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "linear-gradient(to bottom, transparent 55%, rgba(3,17,104,0.18) 100%)",
+                    pointerEvents: "none",
+                  }}
+                />
+              </Box>
+            </motion.div>
+          </Box>
+
+          {/* ── Content ── */}
+          <Box sx={{ order: { xs: 2, md: reverse ? 1 : 2 } }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55 }}
+            >
+              <Chip
+                label={tag}
+                size="small"
+                sx={{
+                  mb: 2.5,
+                  bgcolor: "rgba(20,118,174,0.1)",
+                  color: "#1476AE",
+                  fontWeight: 700,
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  border: "1px solid rgba(20,118,174,0.2)",
+                  borderRadius: "6px",
+                  height: 26,
+                }}
+              />
+
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 800,
+                  fontSize: { xs: "1.65rem", md: "2rem", lg: "2.2rem" },
+                  color: "#031168",
+                  lineHeight: 1.2,
+                  mb: 2,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                {title}
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontSize: { xs: "0.97rem", md: "1.05rem" },
+                  color: "#5A6880",
+                  lineHeight: 1.75,
+                  mb: 4,
+                  pl: 2,
+                  borderLeft: "3px solid #1476AE",
+                }}
+              >
+                {subtitle}
+              </Typography>
+
+              <Box>
+                {bullets.map((b, i) => (
+                  <BulletRow
+                    key={i}
+                    heading={b.heading}
+                    detail={b.detail}
+                    delay={0.08 * i}
+                  />
+                ))}
+              </Box>
+            </motion.div>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
+  );
+};
 
 const EduTech = () => {
   useEffect(() => {
@@ -119,6 +355,11 @@ const EduTech = () => {
               >
                 EduTech Solutions
               </Typography>
+            </Box>
+            <Box sx={{ mb: 6, borderBottom: "4px solid #E0E0E0" }}>
+              {sections.map((section, i) => (
+                <ProgramSection key={i} section={section} />
+              ))}
             </Box>
             <Grid container spacing={4}>
               {features.map((feature, index) => (
