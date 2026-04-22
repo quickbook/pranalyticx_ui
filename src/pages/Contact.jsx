@@ -34,6 +34,11 @@ const contactInfo = [
     details: [pranalyticsAbout.phone],
   },
   {
+    icon: <PhoneIcon sx={{ fontSize: 32 }} />,
+    title: "Alt Phone",
+    details: [pranalyticsAbout.altPhone],
+  },
+  {
     icon: <EmailIcon sx={{ fontSize: 32 }} />,
     title: "Email",
     details: [pranalyticsAbout.email],
@@ -80,7 +85,7 @@ const Contact = () => {
           severity: "error",
         });
         setIsSubmitting(false);
-      })
+      });
   };
 
   useEffect(() => {
@@ -212,7 +217,11 @@ const Contact = () => {
                             size="large"
                             title="Send message"
                             disabled={isSubmitting}
-                            startIcon={isSubmitting ? <CircularProgress size={20} /> : null}
+                            startIcon={
+                              isSubmitting ? (
+                                <CircularProgress size={20} />
+                              ) : null
+                            }
                           >
                             {isSubmitting ? "Sending..." : "Send Message"}
                           </Button>

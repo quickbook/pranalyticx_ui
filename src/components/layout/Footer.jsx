@@ -172,6 +172,23 @@ const Footer = () => {
                 </Typography>
               </Link>
               <Link
+                href={"tel:" + pranalyticsAbout.altPhone}
+                title="Call us"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  color: "white",
+                  textDecoration: "none",
+                  "&:hover": { color: "secondary.main" },
+                }}
+              >
+                <PhoneIcon sx={{ color: "secondary.main" }} />
+                <Typography variant="body2">
+                  {pranalyticsAbout.altPhone}
+                </Typography>
+              </Link>
+              <Link
                 href={"mailto:" + pranalyticsAbout.email}
                 title="Email us"
                 sx={{

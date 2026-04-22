@@ -22,7 +22,7 @@ const ServicesSection = () => (
       <Grid container spacing={4}>
         {services.map((service, index) => (
           <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+            <motion.div style={{height: "100%"}} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
               <Card sx={{ height: '100%', textAlign: 'center', p: 3, transition: 'all 0.3s ease', '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 12px 40px rgba(20, 118, 174, 0.15)' } }}>
                 <CardContent>
                   <Box sx={{ color: 'primary.main', mb: 2 }}>{service.icon}</Box>

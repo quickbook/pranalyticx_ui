@@ -336,7 +336,7 @@ const EduTech = () => {
                   component="h1"
                   sx={{ mb: 2, fontWeight: 700 }}
                 >
-                  EduTech Platform
+                  EduTech Solutions
                 </Typography>
                 <Typography variant="h6" sx={{ opacity: 0.9 }}>
                   Modern learning solutions for schools
@@ -353,7 +353,7 @@ const EduTech = () => {
                 component="h2"
                 sx={{ color: "primary.dark" }}
               >
-                EduTech Solutions
+                Our EduTech Solutions
               </Typography>
             </Box>
             <Box sx={{ mb: 6, borderBottom: "4px solid #E0E0E0" }}>

@@ -60,6 +60,22 @@ const TopBar = () => {
               <PhoneIcon sx={{ fontSize: 16 }} />
               <Typography variant="body3">{pranalyticsAbout.phone}</Typography>
             </Link>
+            <Link
+              href={"tel:" + pranalyticsAbout.altPhone}
+              title="Call us"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 0.5,
+                color: 'white',
+                textDecoration: 'none',
+                fontSize: '0.75rem',
+                '&:hover': { color: 'secondary.main' },
+              }}
+            >
+              <PhoneIcon sx={{ fontSize: 16 }} />
+              <Typography variant="body3">{pranalyticsAbout.altPhone}</Typography>
+            </Link>
             <Box
               sx={{
                 display: { xs: 'none', md: 'flex' },

@@ -129,7 +129,9 @@ const About = () => {
                     sx={{ mb: 3, lineHeight: 1.8 }}
                   >
                     At Pranalyticx, we are dedicated to empowering businesses
-                    with innovative technology solutions.
+                    with innovative technology solutions. We assist businesses
+                    and educational institutions achieve their goals through
+                    cutting-edge IT solutions and modern learning platforms.
                   </Typography>
                   <Button
                     component={RouterLink}

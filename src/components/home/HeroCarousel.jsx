@@ -147,7 +147,7 @@ const HeroCarousel = () => {
                   minHeight: { xs: "500px", md: "600px" },
                   display: "flex",
                   alignItems: "center",
-                  backgroundImage: `linear-gradient(rgba(3, 17, 104, 0.7), rgba(20, 118, 174, 0.5)), url(${slide.image})`,
+                  backgroundImage: `linear-gradient(rgba(3, 17, 104, 0.6), rgba(20, 118, 174, 0.2)), url(${slide.image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
