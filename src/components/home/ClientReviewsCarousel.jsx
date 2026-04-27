@@ -7,6 +7,8 @@ import {
   Avatar,
   Rating,
   Button,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
@@ -85,6 +87,10 @@ const reviews = [
 
 const ClientReviewsCarousel = () => {
   const [expanded, setExpanded] = useState({});
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "lg"));
+  const isDesktop = useMediaQuery(theme.breakpoints.down("xl"));
 
   const toggleExpand = (index) => {
     setExpanded((prev) => ({ ...prev, [index]: !prev[index] }));
@@ -94,7 +100,7 @@ const ClientReviewsCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : isTablet ? 2 : 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
