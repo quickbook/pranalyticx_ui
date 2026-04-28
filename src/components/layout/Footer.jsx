@@ -171,7 +171,7 @@ const Footer = () => {
                   {pranalyticsAbout.phone}
                 </Typography>
               </Link>
-              <Link
+              {/* <Link
                 href={"tel:" + pranalyticsAbout.altPhone}
                 title="Call us"
                 sx={{
@@ -187,7 +187,7 @@ const Footer = () => {
                 <Typography variant="body2">
                   {pranalyticsAbout.altPhone}
                 </Typography>
-              </Link>
+              </Link> */}
               <Link
                 href={"mailto:" + pranalyticsAbout.email}
                 title="Email us"

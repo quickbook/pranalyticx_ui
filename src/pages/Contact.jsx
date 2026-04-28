@@ -33,11 +33,11 @@ const contactInfo = [
     title: "Phone",
     details: [pranalyticsAbout.phone],
   },
-  {
-    icon: <PhoneIcon sx={{ fontSize: 32 }} />,
-    title: "Alt Phone",
-    details: [pranalyticsAbout.altPhone],
-  },
+  // {
+  //   icon: <PhoneIcon sx={{ fontSize: 32 }} />,
+  //   title: "Alt Phone",
+  //   details: [pranalyticsAbout.altPhone],
+  // },
   {
     icon: <EmailIcon sx={{ fontSize: 32 }} />,
     title: "Email",
