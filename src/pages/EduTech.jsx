@@ -311,6 +311,11 @@ const EduTech = () => {
           name="description"
           content="Discover Pranalyticx EduTech solutions - LMS, digital curriculum, virtual classrooms, and analytics."
         />
+        <title>EduTech Solutions - Pranalyticx</title>
+        <meta
+          name="keywords"
+          content="Robotics, AI Literacy, Eye Tracking, EduTech, educational technology, learning management system, digital curriculum, virtual classrooms, education analytics"
+        />
       </Helmet>
       <Layout>
         <Box

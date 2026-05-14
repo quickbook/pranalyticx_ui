@@ -45,14 +45,14 @@ const slides = [
     alt: "Diverse team members collaborating in a modern office environment",
   },
   {
-    title: "Building Foundational Engineering Competencies",
+    title: "Building Foundational Robotics & Engineering Competencies",
     subtitle:
       "This program establishes technical literacy at foundational levels, enabling students to understand how real-world automation systems are powered and structured.",
     image: "/images/hero-education.jpeg",
     alt: "Students engaging with interactive educational technology in a classroom",
   },
   {
-    title: "AI-Powered Literacy Enhancement Platform",
+    title: "AI-Powered Eye Tracking Literacy Enhancement Platform",
     subtitle:
       "Eye-tracking with AI creates personalized literacy pathways, boosting comprehension and vocabulary. Teachers track progress through real-time analytics dashboards.",
     image: "/images/hero-eyetracking.jpg",
