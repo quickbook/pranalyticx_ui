@@ -70,7 +70,7 @@ const features = [
 const sections = [
   {
     tag: "Education Program",
-    title: "Building Foundational Engineering Competencies",
+    title: "Building Foundational Robotics & Engineering Competencies",
     subtitle:
       "A structured program that equips students with the technical literacy to confidently engage with real-world automation and engineering systems from the ground up.",
     bullets: [
@@ -101,7 +101,7 @@ const sections = [
   },
   {
     tag: "AI Platform",
-    title: "AI-Powered Literacy Enhancement Platform",
+    title: "AI-Powered Eye Tracking Literacy Enhancement Platform",
     subtitle:
       "Eye-tracking combined with adaptive AI creates deeply personalised reading experiences — and gives teachers the real-time insights they need to accelerate every learner.",
     bullets: [
