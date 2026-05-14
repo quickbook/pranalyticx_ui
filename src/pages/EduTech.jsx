@@ -307,7 +307,6 @@ const EduTech = () => {
   return (
     <>
       <Helmet>
-        <title>EduTech Platform - Pranalyticx</title>
         <meta
           name="description"
           content="Discover Pranalyticx EduTech solutions - LMS, digital curriculum, virtual classrooms, and analytics."

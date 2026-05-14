@@ -18,11 +18,11 @@ const Index = () => {
         <title>Pranalyticx - Innovation & Excellence in Technology</title>
         <meta
           name="description"
-          content="Pranalyticx offers cutting-edge IT solutions, web development, middleware solutions, tech support, and EduTech platforms to help businesses and educational institutions achieve their goals."
+          content="Pranalyticx offers cutting-edge IT Services, IT solutions, web development, middleware solutions, tech support, and EduTech platforms to help businesses and educational institutions achieve their goals."
         />
         <meta
           name="keywords"
-          content="IT solutions, web development, middleware, tech support, edutech, software development, digital transformation"
+          content="IT services, IT solutions, web development, middleware, tech support, edutech, software development, digital transformation"
         />
         <link rel="canonical" href="https://pranalyticx.com" />
       </Helmet>

@@ -61,7 +61,7 @@ const CircularServicesSection = () => {
   const radius = 140;
 
   return (
-    <Box sx={{ pt: 10, bgcolor: "background.default" }}>
+    <Box component={"article"} sx={{ pt: 10, bgcolor: "background.default" }}>
       <Container maxWidth="xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

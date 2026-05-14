@@ -136,7 +136,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box component={"article"} sx={{ position: "relative" }}>
       <Slider ref={sliderRef} {...sliderSettings}>
         {slides.map((slide, index) => (
           <Box key={index}>

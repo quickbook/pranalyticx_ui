@@ -5,10 +5,10 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box variant="main" component={"main"} sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <TopBar />
       <Navbar />
-      <Box component="main" sx={{ flexGrow: 1 }}>
+      <Box variant="section" component={"section"} sx={{ flexGrow: 1 }}>
         {children}
       </Box>
       <Footer />

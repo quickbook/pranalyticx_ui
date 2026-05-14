@@ -10,13 +10,7 @@ const NotFound = () => {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>404 - Page Not Found | Pranalyticx</title>
-        <meta
-          name="description"
-          content="The page you're looking for doesn't exist."
-        />
-      </Helmet>
+
       <Layout>
         <Box
           sx={{

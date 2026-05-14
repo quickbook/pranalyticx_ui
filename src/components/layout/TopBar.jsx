@@ -10,6 +10,8 @@ import { pranalyticsAbout } from '../../commonfiles/pranalyticsAbout';
 const TopBar = () => {
   return (
     <Box
+    variant="topbar"
+    component={"header"}
       sx={{
         display: { xs: 'none', md: 'block' },
         bgcolor: 'primary.main',

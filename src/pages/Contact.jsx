@@ -95,7 +95,6 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Pranalyticx</title>
         <meta
           name="description"
           content="Contact Pranalyticx for IT solutions and EduTech services."

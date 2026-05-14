@@ -49,10 +49,9 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Pranalyticx | Our Story and Mission</title>
         <meta
           name="description"
-          content="Learn about Pranalyticx - a leading IT solutions provider with 10+ years of experience."
+          content="Learn about Pranalyticx - a leading IT services provider with 10+ years of experience."
         />
       </Helmet>
       <Layout>

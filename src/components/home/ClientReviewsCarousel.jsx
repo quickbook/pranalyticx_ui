@@ -121,7 +121,10 @@ const ClientReviewsCarousel = () => {
   return (
     <Box sx={{ py: 8, px: 2, backgroundColor: "background.light" }}>
       <Helmet>
-        <title>Client Reviews</title>
+        <meta
+          name="description"
+          content="Read what our clients have to say about our IT services and EduTech solutions. Real reviews from businesses we've helped transform digitally."
+        />
       </Helmet>
 
       <Typography

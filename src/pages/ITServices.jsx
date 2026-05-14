@@ -25,53 +25,6 @@ import StorageIcon from "@mui/icons-material/Storage";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useEffect } from "react";
 
-// const services = [
-//   {
-//     icon: <ComputerIcon sx={{ fontSize: 48 }} />,
-//     title: "Web Development",
-//     description: "Custom web applications for your business.",
-//     features: ["Responsive Design", "PWA", "E-commerce", "Custom CMS"],
-//   },
-//   {
-//     icon: <IntegrationInstructionsIcon sx={{ fontSize: 48 }} />,
-//     title: "Middleware Solutions",
-//     description: "Seamless system integration.",
-//     features: [
-//       "API Development",
-//       "System Integration",
-//       "Data Migration",
-//       "Legacy Modernization",
-//     ],
-//   },
-//   {
-//     icon: <SupportAgentIcon sx={{ fontSize: 48 }} />,
-//     title: "Tech Support",
-//     description: "24/7 technical support.",
-//     features: [
-//       "Help Desk",
-//       "Remote Support",
-//       "On-site Assistance",
-//       "Maintenance",
-//     ],
-//   },
-//   {
-//     icon: <CloudIcon sx={{ fontSize: 48 }} />,
-//     title: "Cloud Services",
-//     description: "Scalable cloud solutions.",
-//     features: ["Cloud Migration", "AWS & Azure", "DevOps", "Serverless"],
-//   },
-//   {
-//     icon: <SecurityIcon sx={{ fontSize: 48 }} />,
-//     title: "Cybersecurity",
-//     description: "Protect your digital assets.",
-//     features: [
-//       "Security Audits",
-//       "Penetration Testing",
-//       "Compliance",
-//       "Training",
-//     ],
-//   },
-// ];
 const services = [
   {
     icon: <ComputerIcon sx={{ fontSize: 64 }} />,
@@ -170,6 +123,14 @@ const ITServices = () => {
           name="description"
           content="Explore Pranalyticx IT services including web development, middleware, cloud, and cybersecurity."
         />
+        {/* Additional meta tags for SEO can be added here */}
+        {services.map((service, index) => (
+          <meta
+            key={index}
+            name="keywords"
+            content={service.title + ", " + service.description + ", " + service.features.join(", ")}
+          />
+        ))}
       </Helmet>
       <Layout>
         <Box

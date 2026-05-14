@@ -71,6 +71,7 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: "white", color: "text.primary" }}>
       <Container
+      component={"nav"}
         maxWidth="xl"
         sx={{ padding: { xs: "0 4px 0 8px", md: "0 16px" } }}
       >
